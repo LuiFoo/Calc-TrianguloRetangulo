@@ -147,8 +147,9 @@ function areaeperimetro() {
 }
 
 function prosseguindo() {
-    // if (anguloAarray.length == 1 && anguloBarray.length == 1 && catetoXAarray.length == 1 && catetoYAarray.length == 1 && hipotenusaAarray.length == 1) {
-    if (true) {
+    if (anguloAarray.length == 0 || anguloBarray.length == 0 || catetoXAarray.length == 0 || catetoYAarray.length == 0 || hipotenusaAarray.length == 0) { 
+        document.getElementById('erro').innerHTML = "Erro Wello Horld";
+    } else {
         document.getElementById('paragrafoa').innerHTML = `${anguloAarray[0]} \u00B0`;
         document.getElementById('paragrafob').innerHTML = `${anguloBarray[0]} \u00B0`;
         document.getElementById('paragrafox').innerHTML = catetoXAarray[0];
