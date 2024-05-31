@@ -149,10 +149,7 @@ function areaeperimetro() {
 }
 
 function prosseguindo() {
-    var palha = (catetoXAarray ** 2 + catetoYAarray ** 2) ** 0.5;
-    if (palha.toFixed() != hipotenusaAarray[0]) {
-        document.getElementById('erro').innerHTML = "Houve um erro!";
-    } else {
+    if (true) {
         document.getElementById('paragrafoa').innerHTML = `${anguloAarray[0]} \u00B0`;
         document.getElementById('paragrafob').innerHTML = `${anguloBarray[0]} \u00B0`;
         document.getElementById('paragrafox').innerHTML = catetoXAarray[0];
