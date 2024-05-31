@@ -1,0 +1,88 @@
+:root {
+    --cor-fundo: #2a2a2a;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: skyblue;
+    margin: 1em 0 0 0;
+}
+
+.retangulo__imagem {
+    width: 20em;
+    margin: 1em 0 2rem 0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.paragrafos__sections {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.textos {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
+.textos2 {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color:aquamarine;
+}
+
+.input__section {
+    width: 5em;
+    height: 1.5em;
+    background-color: #d4ebfd;
+}
+
+.botao__section {
+    background-color: skyblue;
+    border-radius: 0.5em;
+    font-family: "Poppins", "sans-serif";
+    font-weight: 800;
+    padding: 0.7em;
+    margin: 1em 0 6em 0;
+}
+
+.botao__section:hover {
+    background-color:rgb(226, 226, 226);
+}
+
+.botao__section2:hover {
+    background-color:rgb(226, 226, 226);
+}
+
+.botao__section2 {
+    background-color: rgb(114, 127, 133);
+    border-radius: 0.5em;
+    font-family: "Poppins", "sans-serif";
+    font-weight: 800;
+    padding: 0.7em;
+    margin: 1em 0 6em 0;
+}
+
+.section2__div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 1.5em 0;
+}
