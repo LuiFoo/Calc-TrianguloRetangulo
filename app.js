@@ -12,6 +12,8 @@ function limpar() {
     document.getElementById('paragrafox').innerHTML = "";
     document.getElementById('paragrafoy').innerHTML = "";
     document.getElementById('paragrafoz').innerHTML = "";
+    document.getElementById('paragrafo1').innerHTML = "";
+    document.getElementById('paragrafo2').innerHTML = "";
     document.getElementById('erro').innerHTML = "";
     anguloAarray = [];
     anguloBarray = [];
@@ -147,8 +149,9 @@ function areaeperimetro() {
 }
 
 function prosseguindo() {
-    if (anguloAarray.length == 0 || anguloBarray.length == 0 || catetoXAarray.length == 0 || catetoYAarray.length == 0 || hipotenusaAarray.length == 0) { 
-        document.getElementById('erro').innerHTML = "Erro Wello Horld";
+    var palha = (catetoXAarray ** 2 + catetoYAarray ** 2) ** 0.5;
+    if (palha != hipotenusaAarray[0]) {
+        document.getElementById('erro').innerHTML = "Houve um erro!";
     } else {
         document.getElementById('paragrafoa').innerHTML = `${anguloAarray[0]} \u00B0`;
         document.getElementById('paragrafob').innerHTML = `${anguloBarray[0]} \u00B0`;
