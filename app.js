@@ -149,7 +149,24 @@ function areaeperimetro() {
 }
 
 function prosseguindo() {
-    if (true) {
+
+    function ehTrianguloRetangulo(a, b, c, tolerancia = 1e-10) {
+        // Ordena os lados para garantir que 'c' seja o maior
+        let lados = [a, b, c].sort((x, y) => x - y);
+        let [lado1, lado2, hipotenusa] = lados;
+    
+        // Verifica o Teorema de Pitágoras com uma margem de tolerância
+        let diferenca = Math.abs(Math.pow(lado1, 2) + Math.pow(lado2, 2) - Math.pow(hipotenusa, 2));
+        
+        return diferenca <= tolerancia;
+    }
+    
+    // Exemplo de uso:
+    let a = catetoXAarray[0];
+    let b = catetoYAarray[0];
+    let c = hipotenusaAarray[0];
+    
+    if (ehTrianguloRetangulo(a, b, c)) {
         document.getElementById('paragrafoa').innerHTML = `${anguloAarray[0]} \u00B0`;
         document.getElementById('paragrafob').innerHTML = `${anguloBarray[0]} \u00B0`;
         document.getElementById('paragrafox').innerHTML = catetoXAarray[0];
@@ -157,5 +174,7 @@ function prosseguindo() {
         document.getElementById('paragrafoz').innerHTML = hipotenusaAarray[0];
         document.getElementById('paragrafo1').innerHTML = areaTriangulo[0];
         document.getElementById('paragrafo2').innerHTML = perimetroTriangulo[0];
+    } else {
+        document.getElementById('erro').innerHTML = "Não é um triângulo retângulo.";
     }
 }
