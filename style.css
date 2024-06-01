@@ -104,12 +104,11 @@ body {
 }
 
 .botao__section2 {
-    background-color: rgb(114, 127, 133);
+    background-color: skyblue;
     border-radius: 0.5em;
     font-family: "Poppins", "sans-serif";
     font-weight: 800;
     padding: 0.7em;
-    margin: 1em 0 6em 0;
 }
 
 .section2__div {
