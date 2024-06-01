@@ -1,3 +1,4 @@
+//Arrays para armazenar os dados!
 var anguloAarray = [];
 var anguloBarray = [];
 var catetoXAarray = [];
@@ -6,7 +7,9 @@ var hipotenusaAarray = [];
 var areaTriangulo = [];
 var perimetroTriangulo = [];
 
+
 function limpar() {
+    //Limpa o básico!
     document.getElementById('paragrafoa').innerHTML = "";
     document.getElementById('paragrafob').innerHTML = "";
     document.getElementById('paragrafox').innerHTML = "";
@@ -25,6 +28,7 @@ function limpar() {
 }
 
 function limpartudo() {
+    //Limpa o básico e onde insere informações!
     limpar()
     document.getElementById('cateto-1').value = "";
     document.getElementById('angulo-1').value = "";
@@ -35,6 +39,7 @@ function limpartudo() {
 }
 
 function presseguir() {
+    //Ao clicar calcular ele chama a funcao limpar
     limpar()
 
     //Adicionando valores em Array
@@ -54,20 +59,32 @@ function presseguir() {
         Number(hipotenusaAarray.push(document.getElementById('hipotenusa').value));
     }
 
-    if (catetoXAarray.length == 1 && catetoYAarray.length == 1 &&hipotenusaAarray.length == 1) {
+    // Checando pelas caracteristicas se é um triangulo ou não!
+    if (catetoXAarray.length == 1 && catetoYAarray.length == 1 && hipotenusaAarray.length == 1) {
         document.getElementById('erro').innerHTML = "Tente remover o valor da Hipotenusa ou algum Cateto!";
-    } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 &&hipotenusaAarray.length == 0 && anguloAarray.length == 0 && anguloBarray.length == 0) {
+    } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 && hipotenusaAarray.length == 0 && anguloAarray.length == 0 && anguloBarray.length == 0) {
         document.getElementById('erro').innerHTML = "Foneça dados!";
-    } else if (anguloAarray.length == 1 && anguloBarray.length == 1) {
-        document.getElementById('erro').innerHTML = "Não é possivel calcular!";
     } else if (anguloAarray[0] >= 90 || anguloBarray[0] >= 90) {
         document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
+    } else if (anguloAarray.length == 1 && anguloBarray.length == 1) {
+        if (catetoXAarray.length == 1 && catetoYAarray.length == 1 && hipotenusaAarray.length == 0) {
+            document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
+        } else if (catetoXAarray.length == 1 && catetoYAarray.length == 0 && hipotenusaAarray.length == 1) {
+            document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
+        } else if (catetoXAarray.length == 0 && catetoYAarray.length == 1 && hipotenusaAarray.length == 1) {
+            document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
+        } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 && hipotenusaAarray.length == 0) {
+            document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
+        } else {
+            stage2();
+        }
     } else {
         stage2();
     }
 }
 
 function stage2() {
+    //Funções que o código vai chamar!
     pitagoras();
     trigonometria();
     areaeperimetro();
@@ -163,10 +180,12 @@ function trigonometria() {
 }
 
 function areaeperimetro() {
+    //Calcula a area do Triangulo!
     var areaTri = (catetoXAarray[0] * catetoYAarray[0]) / 2;
     var perimeTri = Number(catetoXAarray[0]) + Number(catetoYAarray[0]) + Number(hipotenusaAarray[0]);
     areaTriangulo.push(areaTri)
     perimetroTriangulo.push(perimeTri)
+    stage2()
 }
 
 function prosseguindo() {
@@ -188,7 +207,7 @@ function prosseguindo() {
     let c = hipotenusaAarray[0];
     
     if (ehTrianguloRetangulo(a, b, c)) {
-        //Aproximado
+        //Aproximando os números finais para exibir
         var aanguloA = Number(anguloAarray[0]).toFixed(3);
         var aanguloB = Number(anguloBarray[0]).toFixed(3);
         var ccatetoX = Number(catetoXAarray[0]).toFixed(3);
@@ -197,6 +216,7 @@ function prosseguindo() {
         var aareatriangulo = Number(areaTriangulo[0]).toFixed(3);
         var pperimetrotriangulo = Number(perimetroTriangulo[0]).toFixed(3);
 
+        //Exibindo na tela!
         document.getElementById('paragrafoa').innerHTML = `${aanguloA} \u00B0`;
         document.getElementById('paragrafob').innerHTML = `${aanguloB} \u00B0`;
         document.getElementById('paragrafox').innerHTML = ccatetoX;
