@@ -14,60 +14,66 @@
         <title>CalcTri</title>
     </head>
     <body>
-        <h1 class="titulo">CalcTri</h1>
-        <img src="./assets/images/tri-retangulo.png" alt="" class="retangulo__imagem">
-        <section class="section">
-            <p class="textos paragrafos__sections">A
-                <input type="number" id="angulo-1" class="input__section">
-            </p>
-            <p class="textos paragrafos__sections">B
-                <input type="number" id="angulo-2" class="input__section">
-            </p>
-            <p class="textos paragrafos__sections">X
-                <input type="number" id="cateto-1" class="input__section">
-            </p>
-            <p class="textos paragrafos__sections">Y
-                <input type="number" id="cateto-2" class="input__section">
-            </p>
-            <p class="textos paragrafos__sections">Z
-                <input type="number" id="hipotenusa" class="input__section" >
-            </p>
-            <input type="button" id="button" value="AVANÇAR" class="botao__section" onclick="presseguir()">
-            
-        </section>
+        <div>
+            <h1 class="titulo">Calculadora de Triângulo Retângulo</h1>
+            <section class="primeiro-retangulo">
+                <img src="./assets/images/tri-retangulo.png" alt="" class="retangulo__imagem">
+                <section class="section">
+                    <p class="textos paragrafos__sections">A
+                        <input type="number" id="angulo-1" class="input__section">
+                    </p>
+                    <p class="textos paragrafos__sections">B
+                        <input type="number" id="angulo-2" class="input__section">
+                    </p>
+                    <p class="textos paragrafos__sections">X
+                        <input type="number" id="cateto-1" class="input__section">
+                    </p>
+                    <p class="textos paragrafos__sections">Y
+                        <input type="number" id="cateto-2" class="input__section">
+                    </p>
+                    <p class="textos paragrafos__sections">Z
+                        <input type="number" id="hipotenusa" class="input__section" >
+                    </p>
+                    <input type="button" id="button" value="Calcular" class="botao__section" onclick="presseguir()">
+                </section>
+            </section>
+        </div>
 
-        <section class="section2">
-        <p id="erro" class="textos2"></p>
-        <div class="section2__div">
-            <p class="textos">A</p>
-            <p class="textos2" id="paragrafoa"></p>
+        <div>
+            <section class="section2">
+                <p class="textos4">Resultado :</p>
+                <p id="erro" class="textos2"></p>
+                <div class="section2__div">
+                    <p class="textos">A</p>
+                    <p class="textos2" id="paragrafoa"></p>
+                </div>
+                <div class="section2__div">
+                    <p class="textos">B</p>
+                    <p class="textos2" id="paragrafob"></p>
+                </div>
+                <div class="section2__div">
+                    <p class="textos">X</p>
+                    <p class="textos2" id="paragrafox"></p>
+                </div>
+                <div class="section2__div">
+                    <p class="textos">Y</p>
+                    <p class="textos2" id="paragrafoy"></p>
+                </div>
+                <div class="section2__div">
+                    <p class="textos">Z</p>
+                    <p class="textos2" id="paragrafoz"></p>
+                </div>
+                <div class="section2__div">
+                    <p class="textos">ÁREA</p>
+                    <p class="textos2" id="paragrafo1"></p>
+                </div>
+                <div class="section2__div">
+                    <p class="textos">PERIMETRO</p>
+                    <p class="textos2" id="paragrafo2"></p>
+                </div>
+            </section>
+            <input type="button" id="button" value="LIMPAR" class="botao__section2" onclick="limpar()">
         </div>
-        <div class="section2__div">
-            <p class="textos">B</p>
-            <p class="textos2" id="paragrafob"></p>
-        </div>
-        <div class="section2__div">
-            <p class="textos">X</p>
-            <p class="textos2" id="paragrafox"></p>
-        </div>
-        <div class="section2__div">
-            <p class="textos">Y</p>
-            <p class="textos2" id="paragrafoy"></p>
-        </div>
-        <div class="section2__div">
-            <p class="textos">Z</p>
-            <p class="textos2" id="paragrafoz"></p>
-        </div>
-        <div class="section2__div">
-            <p class="textos">ÁREA</p>
-            <p class="textos2" id="paragrafo1"></p>
-        </div>
-        <div class="section2__div">
-            <p class="textos">PERIMETRO</p>
-            <p class="textos2" id="paragrafo2"></p>
-        </div>
-        </section>
-        <input type="button" id="button" value="LIMPAR" class="botao__section2" onclick="limpar()">
 
     </body>
     <script src="./app.js"></script>

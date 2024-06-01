@@ -167,13 +167,22 @@ function prosseguindo() {
     let c = hipotenusaAarray[0];
     
     if (ehTrianguloRetangulo(a, b, c)) {
-        document.getElementById('paragrafoa').innerHTML = `${anguloAarray[0]} \u00B0`;
-        document.getElementById('paragrafob').innerHTML = `${anguloBarray[0]} \u00B0`;
-        document.getElementById('paragrafox').innerHTML = catetoXAarray[0];
-        document.getElementById('paragrafoy').innerHTML = catetoYAarray[0];
-        document.getElementById('paragrafoz').innerHTML = hipotenusaAarray[0];
-        document.getElementById('paragrafo1').innerHTML = areaTriangulo[0];
-        document.getElementById('paragrafo2').innerHTML = perimetroTriangulo[0];
+        //Aproximado
+        var aanguloA = Number(anguloAarray[0]).toFixed(3);
+        var aanguloB = Number(anguloBarray[0]).toFixed(3);
+        var ccatetoX = Number(catetoXAarray[0]).toFixed(3);
+        var ccatetoY = Number(catetoYAarray[0]).toFixed(3);
+        var hhipotenusa = Number(hipotenusaAarray[0]).toFixed(3);
+        var aareatriangulo = Number(areaTriangulo[0]).toFixed(3);
+        var pperimetrotriangulo = Number(perimetroTriangulo[0]).toFixed(3);
+
+        document.getElementById('paragrafoa').innerHTML = `${aanguloA} \u00B0`;
+        document.getElementById('paragrafob').innerHTML = `${aanguloB} \u00B0`;
+        document.getElementById('paragrafox').innerHTML = ccatetoX;
+        document.getElementById('paragrafoy').innerHTML = ccatetoY;
+        document.getElementById('paragrafoz').innerHTML = hhipotenusa;
+        document.getElementById('paragrafo1').innerHTML = aareatriangulo;
+        document.getElementById('paragrafo2').innerHTML = pperimetrotriangulo;
     } else {
         document.getElementById('erro').innerHTML = "Não é um triângulo retângulo.";
     }

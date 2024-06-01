@@ -1,5 +1,5 @@
 :root {
-    --cor-fundo: #2a2a2a;
+    --cor-fundo: #1a1a24;
 }
 
 body {
@@ -9,17 +9,24 @@ body {
     flex-direction: column;
 }
 
+.primeiro-retangulo {
+    margin: 40px 0 0 0;
+    background-color: #2e2e2ea4;
+    border-radius: 1em;
+    padding: 2em;
+}
+
 .titulo {
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    color: skyblue;
+    color: rgb(255, 255, 255);
     margin: 1em 0 0 0;
 }
 
 .retangulo__imagem {
     width: 20em;
-    margin: 1em 0 2rem 0;
+    margin: 1em 0 1rem 0;
 }
 
 .section {
@@ -48,10 +55,26 @@ body {
     color:aquamarine;
 }
 
+.textos4 {
+    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: rgb(120, 96, 224);
+}
+
 .input__section {
     width: 5em;
     height: 1.5em;
     background-color: #d4ebfd;
+    border-radius: 0.5em;
+}
+
+.section2 {
+    background-color: #46689b6e;
+    padding: 2em;
+    width: 200px;
+    margin: 40px 0 0 0;
+    border-radius: 1em;
 }
 
 .botao__section {
@@ -60,7 +83,7 @@ body {
     font-family: "Poppins", "sans-serif";
     font-weight: 800;
     padding: 0.7em;
-    margin: 1em 0 6em 0;
+    margin: 1em 0 2em 0;
 }
 
 .botao__section:hover {
@@ -85,4 +108,13 @@ body {
     align-items: center;
     gap: 1em;
     margin: 1.5em 0;
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+       display: flex; 
+       flex-direction: row;
+       justify-content: center;
+       gap: 100px;
+    }
 }
