@@ -24,6 +24,16 @@ function limpar() {
     perimetroTriangulo = [];
 }
 
+function limpartudo() {
+    limpar()
+    document.getElementById('cateto-1').value = "";
+    document.getElementById('angulo-1').value = "";
+    document.getElementById('angulo-2').value = "";
+    document.getElementById('cateto-1').value = "";
+    document.getElementById('cateto-2').value = "";
+    document.getElementById('hipotenusa').value = "";
+}
+
 function presseguir() {
     limpar()
 
@@ -43,7 +53,14 @@ function presseguir() {
     if (document.getElementById('hipotenusa').value > 0) {
         Number(hipotenusaAarray.push(document.getElementById('hipotenusa').value));
     }
-    stage2();
+
+    if (catetoXAarray.length == 1 && catetoYAarray.length == 1 &&hipotenusaAarray.length == 1) {
+        document.getElementById('erro').innerHTML = "Foneça apenas 2 valores!";
+    } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 &&hipotenusaAarray.length == 0 && anguloAarray.length == 0 && anguloBarray.length == 0) {
+        document.getElementById('erro').innerHTML = "Foneça dados!";
+    } else {
+        stage2();
+    }
 }
 
 function stage2() {
@@ -184,6 +201,6 @@ function prosseguindo() {
         document.getElementById('paragrafo1').innerHTML = aareatriangulo;
         document.getElementById('paragrafo2').innerHTML = pperimetrotriangulo;
     } else {
-        document.getElementById('erro').innerHTML = "Não é um triângulo retângulo.";
+        document.getElementById('erro').innerHTML = "Revise os dados!";
     }
 }
