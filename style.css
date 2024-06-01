@@ -21,7 +21,6 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     color: rgb(255, 255, 255);
-    margin: 1em 0 0 0;
 }
 
 .retangulo__imagem {
@@ -108,6 +107,18 @@ body {
     align-items: center;
     gap: 1em;
     margin: 1.5em 0;
+}
+
+.imagem_logo {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 10% 15%;
+}
+
+.imagem__triangulo {
+    width: 70px;
+    border-radius: 1em;
 }
 
 @media screen and (min-width: 1000px) {
