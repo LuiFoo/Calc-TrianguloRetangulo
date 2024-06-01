@@ -60,6 +60,8 @@ function presseguir() {
         document.getElementById('erro').innerHTML = "Foneça dados!";
     } else if (anguloAarray.length == 1 && anguloBarray.length == 1) {
         document.getElementById('erro').innerHTML = "Não é possivel calcular!";
+    } else if (anguloAarray[0] == 90 || anguloBarray[0] == 90) {
+        document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
     } else {
         stage2();
     }
