@@ -10,10 +10,12 @@ body {
 }
 
 .primeiro-retangulo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin: 40px 0 0 0;
     background-color: #2e2e2ea4;
     border-radius: 1em;
-    padding: 2em;
 }
 
 .titulo {
