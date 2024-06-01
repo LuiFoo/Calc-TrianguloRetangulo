@@ -61,21 +61,30 @@ function presseguir() {
 
     // Checando pelas caracteristicas se é um triangulo ou não!
     if (catetoXAarray.length == 1 && catetoYAarray.length == 1 && hipotenusaAarray.length == 1) {
+        // Possuindo os 3 valores o codigo barra
         document.getElementById('erro').innerHTML = "Tente remover o valor da Hipotenusa ou algum Cateto!";
     } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 && hipotenusaAarray.length == 0 && anguloAarray.length == 0 && anguloBarray.length == 0) {
+        // Não possuir valor de X, Y, Z, A OU B codigo barra
         document.getElementById('erro').innerHTML = "Foneça dados!";
     } else if (anguloAarray[0] >= 90 || anguloBarray[0] >= 90) {
+        // Angulos inseridos não podem ser maiores ou iguais que 90
         document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
-    } else if (catetoXAarray[0] == hipotenusaAarray[0] || catetoYAarray[0] == hipotenusaAarray[0]) {
+    } else if (catetoXAarray[0] == hipotenusaAarray[0] && catetoYAarray.length == 0 || catetoYAarray[0] == hipotenusaAarray[0] && catetoXAarray.length == 0) {
+        // X igual a Z e Y não tendo o valor de Y ou Y igual a Z e não tendo valor de X o codigo barra
         document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
     } else if (anguloAarray.length == 1 && anguloBarray.length == 1) {
+        // FUNIL com os dois angulos inseridos
         if (catetoXAarray.length == 1 && catetoYAarray.length == 1 && hipotenusaAarray.length == 0) {
+            // Inserindo os dois angulos e de X, Y não de Z o codigo barra
             document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
         } else if (catetoXAarray.length == 1 && catetoYAarray.length == 0 && hipotenusaAarray.length == 1) {
+            // Inserindo os dois angulos e de X e Z o codigo barra
             document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
         } else if (catetoXAarray.length == 0 && catetoYAarray.length == 1 && hipotenusaAarray.length == 1) {
+            // Inserindo os dois angulos e de Y e Z o codigo barra
             document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
         } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 && hipotenusaAarray.length == 0) {
+            // Inserindo os dois angulos e nenhum outro o codigo barra.
             document.getElementById('erro').innerHTML = "Esse triangulo não existe!";
         } else {
             stage2();
