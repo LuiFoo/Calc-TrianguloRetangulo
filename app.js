@@ -185,7 +185,6 @@ function areaeperimetro() {
     var perimeTri = Number(catetoXAarray[0]) + Number(catetoYAarray[0]) + Number(hipotenusaAarray[0]);
     areaTriangulo.push(areaTri)
     perimetroTriangulo.push(perimeTri)
-    stage2()
 }
 
 function prosseguindo() {
