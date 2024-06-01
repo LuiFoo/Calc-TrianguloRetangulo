@@ -55,9 +55,11 @@ function presseguir() {
     }
 
     if (catetoXAarray.length == 1 && catetoYAarray.length == 1 &&hipotenusaAarray.length == 1) {
-        document.getElementById('erro').innerHTML = "Foneça apenas 2 valores!";
+        document.getElementById('erro').innerHTML = "Tente remover o valor da Hipotenusa ou algum Cateto!";
     } else if (catetoXAarray.length == 0 && catetoYAarray.length == 0 &&hipotenusaAarray.length == 0 && anguloAarray.length == 0 && anguloBarray.length == 0) {
         document.getElementById('erro').innerHTML = "Foneça dados!";
+    } else if (anguloAarray.length == 1 && anguloBarray.length == 1) {
+        document.getElementById('erro').innerHTML = "Não é possivel calcular!";
     } else {
         stage2();
     }
@@ -201,6 +203,6 @@ function prosseguindo() {
         document.getElementById('paragrafo1').innerHTML = aareatriangulo;
         document.getElementById('paragrafo2').innerHTML = pperimetrotriangulo;
     } else {
-        document.getElementById('erro').innerHTML = "Revise os dados!";
+        document.getElementById('erro').innerHTML = "Revise os dados fornecidos!";
     }
 }
